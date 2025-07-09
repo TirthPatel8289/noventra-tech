@@ -1,0 +1,94 @@
+/* Reuse your brand gradient and structure */
+.signup-body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to right, #6a0dad, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.signup-box {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.signup-logo img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.signup-box h2 {
+    color: #6a0dad;
+    margin-bottom: 10px;
+}
+
+.signup-subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #6a0dad;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a0dad;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #5a0dac;
+}
+
+.signup-footer {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-footer a {
+    color: #6a0dad;
+    text-decoration: none;
+    font-weight: 500;
+}

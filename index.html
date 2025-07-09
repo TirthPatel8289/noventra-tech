@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noventra Tech</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <!-- Hamburger -->
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Comparison</a></li>
+                        <li><a href="#">Request a Quote</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search Toggle -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="language-selector">
+                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
+                            <ul id="langMenu" class="lang-menu">
+                                <li data-lang="EN">English</li>
+                                <li data-lang="HI">Hindi</li>
+                                <li data-lang="FR">French</li>
+                            </ul>
+                        </div>
+                        <!-- Currency Selector -->
+                        <div class="currency-selector">
+                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
+                            <ul id="currencyMenu" class="currency-menu">
+                                <li data-currency="CAD">$ CAD</li>
+                                <li data-currency="INR">₹ INR</li>
+                                <li data-currency="EUR">€ EUR</li>
+                            </ul>
+                        </div>
+                        <!-- User Login Section -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">User <i class="fas fa-chevron-down"></i></span>
+
+                            <!-- Dropdown (optional) -->
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>UP TO 70% OFF</h1>
+            <p>Grab the Deal</p>
+            <a href="#" class="btn">More</a>
+        </div>
+        <div class="hero-image">
+            <img src="images/news.png" alt="Sale Banner">
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="image-carousel">
+        <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+
+        <div class="carousel-track-container">
+            <ul class="carousel-track" id="carouselTrack">
+                <li class="carousel-slide current-slide">
+                    <img src="images/banner1.jpg" alt="Slide 1" />
+                </li>
+                <li class="carousel-slide">
+                    <img src="images/banner2.jpg" alt="Slide 2" />
+                </li>
+                <li class="carousel-slide">
+                    <img src="images/banner3.jpg" alt="Slide 3" />
+                </li>
+            </ul>
+        </div>
+
+        <button class="carousel-btn right" id="nextBtn">&#10095;</button>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Your One-Stop Tech Solution: Repairs, Builds & Components</h2>
+        <div class="service-boxes">
+            <div class="box">
+                <img src="images/shoppart.png" alt="Shop Parts">
+                <p>Shop Parts</p>
+            </div>
+            <div class="box">
+                <img src="images/repair.png" alt="Request a Repair">
+                <p>Request a Repair</p>
+            </div>
+            <div class="box">
+                <img src="images/custombuild.png" alt="Custom Build">
+                <p>Get a Custom Build Computer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Service</h3>
+                <ul>
+                    <li>Software/Hardware Repairs</li>
+                    <li>Custom PC Builds</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Menu toggle code (already added earlier)
+        const toggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        document.querySelectorAll('#navLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+
+        const searchIcon = document.getElementById('searchIcon');
+        const searchDropdown = document.getElementById('searchDropdown');
+        const searchInput = document.getElementById('searchInput');
+
+        // Toggle dropdown visibility
+        searchIcon.addEventListener('click', () => {
+            searchDropdown.classList.toggle('show');
+            if (searchDropdown.classList.contains('show')) {
+                searchInput.focus();
+            }
+        });
+
+        // Optional: Hide if clicked outside
+        document.addEventListener('click', function (e) {
+            if (!searchDropdown.contains(e.target) && !searchIcon.contains(e.target)) {
+                searchDropdown.classList.remove('show');
+            }
+        });
+
+        // Handle Enter key
+        searchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                alert("You searched for: " + this.value);
+                this.value = "";
+                searchDropdown.classList.remove('show');
+            }
+        });
+
+
+        // Language dropdown
+        const langToggle = document.getElementById('langToggle');
+        const langMenu = document.getElementById('langMenu');
+
+        langToggle.addEventListener('click', () => {
+            langMenu.style.display = langMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Update displayed language
+        document.querySelectorAll('#langMenu li').forEach(item => {
+            item.addEventListener('click', () => {
+                const selected = item.getAttribute('data-lang');
+                langToggle.innerHTML = `${selected} <i class="fas fa-chevron-down"></i>`;
+                langMenu.style.display = 'none';
+
+                // (Optional) Logic to change text content
+                // changeWebsiteLanguage(selected);
+            });
+        });
+
+        // Hide dropdown when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+                langMenu.style.display = 'none';
+            }
+        });
+
+
+        // Currency dropdown toggle
+        const currencyToggle = document.getElementById('currencyToggle');
+        const currencyMenu = document.getElementById('currencyMenu');
+
+        currencyToggle.addEventListener('click', () => {
+            currencyMenu.style.display = currencyMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Update currency symbol across the site
+        document.querySelectorAll('#currencyMenu li').forEach(item => {
+            item.addEventListener('click', () => {
+                const currencyCode = item.getAttribute('data-currency');
+                currencyToggle.innerHTML = `${currencyCode} <i class="fas fa-chevron-down"></i>`;
+                currencyMenu.style.display = 'none';
+                updateCurrencySymbol(currencyCode);
+            });
+        });
+
+        // Click outside to close
+        document.addEventListener('click', function (e) {
+            if (!currencyToggle.contains(e.target) && !currencyMenu.contains(e.target)) {
+                currencyMenu.style.display = 'none';
+            }
+        });
+
+        // Function to update all prices
+        function updateCurrencySymbol(currency) {
+            const currencySymbols = {
+                CAD: '$',
+                INR: '₹',
+                EUR: '€'
+            };
+
+            const symbol = currencySymbols[currency] || '$';
+
+            // Update all elements with class 'price'
+            document.querySelectorAll('.price').forEach(el => {
+                const amount = el.getAttribute('data-amount'); // raw number
+                el.innerText = `${symbol}${amount}`;
+            });
+        }
+
+
+
+
+        const userToggle = document.getElementById('userToggle');
+        const userMenu = document.getElementById('userMenu');
+        const signInOption = document.getElementById('signInOption');
+        const signOutOption = document.getElementById('signOutOption');
+
+        // Simulated login state
+        let isSignedIn = false;
+        let userName = "USER";
+
+        // Toggle user menu
+        userToggle.addEventListener('click', () => {
+            userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Sign In logic
+        signInOption.addEventListener('click', () => {
+            isSignedIn = true;
+            userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
+            userMenu.style.display = 'none';
+        });
+
+        // Sign Out logic
+        signOutOption.addEventListener('click', () => {
+            isSignedIn = false;
+            userToggle.innerHTML = `Sign In <i class="fas fa-chevron-down"></i>`;
+            userMenu.style.display = 'none';
+        });
+
+        // Hide menu on outside click
+        document.addEventListener('click', function (e) {
+            if (!userToggle.contains(e.target) && !userMenu.contains(e.target)) {
+                userMenu.style.display = 'none';
+            }
+        });
+
+
+        // On page load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('signedIn') === 'true') {
+                isSignedIn = true;
+                userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
+            }
+        });
+
+        signInOption.addEventListener('click', () => {
+            isSignedIn = true;
+            localStorage.setItem('signedIn', 'true');
+            userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
+            userMenu.style.display = 'none';
+        });
+
+        signOutOption.addEventListener('click', () => {
+            isSignedIn = false;
+            localStorage.setItem('signedIn', 'false');
+            userToggle.innerHTML = `Sign In <i class="fas fa-chevron-down"></i>`;
+            userMenu.style.display = 'none';
+        });
+
+
+
+
+        const track = document.getElementById("carouselTrack");
+        const slides = Array.from(track.children);
+        const prevButton = document.getElementById("prevBtn");
+        const nextButton = document.getElementById("nextBtn");
+
+        let currentIndex = 0;
+
+        function updateSlidePosition() {
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        }
+
+        prevButton.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlidePosition();
+        });
+
+        nextButton.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlidePosition();
+        });
+
+        // Make sure the first slide is positioned on load
+        window.addEventListener("load", updateSlidePosition);
+
+
+
+        // On page load, check localStorage
+        window.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("signedIn") === "true") {
+                isSignedIn = true;
+                userName = localStorage.getItem("userName") || "User";
+                userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
