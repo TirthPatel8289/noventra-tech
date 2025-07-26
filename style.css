@@ -63,6 +63,27 @@ body {
     border-bottom: 2px solid #6a0dad;
 }
 
+.buttonStlyeD {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 /* Right Icons */
 .nav-icons {
     display: flex;

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Noventra Tech</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Header from index.html -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <!-- Hamburger -->
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search Toggle -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="language-selector">
+                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
+                            <ul id="langMenu" class="lang-menu">
+                                <li data-lang="EN">English</li>
+                                <li data-lang="HI">Hindi</li>
+                                <li data-lang="FR">French</li>
+                            </ul>
+                        </div>
+                        <!-- Currency Selector -->
+                        <div class="currency-selector">
+                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
+                            <ul id="currencyMenu" class="currency-menu">
+                                <li data-currency="CAD">$ CAD</li>
+                                <li data-currency="INR">₹ INR</li>
+                                <li data-currency="EUR">€ EUR</li>
+                            </ul>
+                        </div>
+                        <!-- User Login Section -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
+
+                            <!-- Dropdown (optional) -->
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <h1>Shop Computer Parts & Software</h1>
+    </header>
+
+    <main>
+        <section class="product-section">
+            <h2>Hardware Products</h2>
+            <section class="products-container">
+
+                <div class="product-card">
+                    <img src="images/ram.jpg" alt="RAM" class="product-image" />
+                    <div class="product-details">
+                        <h3>Corsair Vengeance 16GB RAM</h3>
+                        <p>High-speed DDR4 memory for gaming and productivity.</p>
+                        <div class="price">$89.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/ssd.jpg" alt="SSD" class="product-image" />
+                    <div class="product-details">
+                        <h3>Samsung 970 EVO 1TB SSD</h3>
+                        <p>Ultra-fast NVMe SSD with reliable performance.</p>
+                        <div class="price">$129.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/gpu.jpg" alt="GPU" class="product-image" />
+                    <div class="product-details">
+                        <h3>NVIDIA GeForce RTX 4060</h3>
+                        <p>Latest graphics card for high-performance gaming.</p>
+                        <div class="price">$399.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/keyboard.jpg" alt="Keyboard" class="product-image" />
+                    <div class="product-details">
+                        <h3>Mechanical Gaming Keyboard</h3>
+                        <p>RGB backlit keys with tactile switches for smooth typing.</p>
+                        <div class="price">$69.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/motherboard.jpg" alt="Motherboard" class="product-image" />
+                    <div class="product-details">
+                        <h3>ASUS ROG Strix B550-F</h3>
+                        <p>Powerful motherboard with PCIe 4.0 support.</p>
+                        <div class="price">$189.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="product-section">
+            <h2>Software Products</h2>
+            <section class="products-container">
+
+                <div class="product-card">
+                    <img src="images/windows11.jpg" alt="Windows 11 Pro" class="product-image" />
+                    <div class="product-details">
+                        <h3>Windows 11 Pro</h3>
+                        <p>Secure, powerful OS for modern computing.</p>
+                        <div class="price">$149.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/ubuntu.jpg" alt="Ubuntu 24.04 LTS" class="product-image" />
+                    <div class="product-details">
+                        <h3>Ubuntu 24.04 LTS</h3>
+                        <p>Fast, open-source Linux OS for developers & users.</p>
+                        <div class="price">Free</div>
+                        <button>Download</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/ms-office.png" alt="Microsoft Office 365" class="product-image" />
+                    <div class="product-details">
+                        <h3>Microsoft Office 365</h3>
+                        <p>Word, Excel, PowerPoint & more – cloud enabled.</p>
+                        <div class="price">$99.99/year</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/adobe-acrobat.png" alt="Adobe Acrobat Pro" class="product-image" />
+                    <div class="product-details">
+                        <h3>Adobe Acrobat Pro</h3>
+                        <p>Create, edit & sign PDFs like a pro.</p>
+                        <div class="price">$14.99/month</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/jetbrains.png" alt="JetBrains IntelliJ IDEA" class="product-image" />
+                    <div class="product-details">
+                        <h3>JetBrains IntelliJ IDEA</h3>
+                        <p>Top-tier Java IDE with smart code assistance.</p>
+                        <div class="price">$89.99/year</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/visualstudio.png" alt="Visual Studio Pro" class="product-image" />
+                    <div class="product-details">
+                        <h3>Visual Studio Pro</h3>
+                        <p>Enterprise-level tools for .NET and C++ development.</p>
+                        <div class="price">$499.00</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/norton.png" alt="Norton 360 Deluxe" class="product-image" />
+                    <div class="product-details">
+                        <h3>Norton 360 Deluxe</h3>
+                        <p>Advanced antivirus & privacy protection suite.</p>
+                        <div class="price">$59.99/year</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/malwarebytes.png" alt="Malwarebytes Premium" class="product-image" />
+                    <div class="product-details">
+                        <h3>Malwarebytes Premium</h3>
+                        <p>Next-gen antivirus with zero-day protection.</p>
+                        <div class="price">$39.99/year</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/adobe-photoshop.png" alt="Adobe Photoshop" class="product-image" />
+                    <div class="product-details">
+                        <h3>Adobe Photoshop</h3>
+                        <p>Industry-leading photo editing & design tool.</p>
+                        <div class="price">$20.99/month</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/finalcut.png" alt="Final Cut Pro" class="product-image" />
+                    <div class="product-details">
+                        <h3>Final Cut Pro</h3>
+                        <p>Professional video editing software for Mac.</p>
+                        <div class="price">$299.99</div>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Service</h3>
+                <ul>
+                    <li>Software/Hardware Repairs</li>
+                    <li>Custom PC Builds</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="#">PC Components</a></li>
+                    <li><a href="#">Laptops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+  .compare-section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+  }
+
+  .compare-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+  }
+
+  select,
+  button {
+      padding: 0.6rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+  }
+
+  .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  header h1 {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      text-align: left;
+  }
+
+  .comparison-table th {
+      background-color: #333;
+      color: #fff;
+  }

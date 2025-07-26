@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Noventra Tech</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Header from index.html -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <!-- Hamburger -->
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search Toggle -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="language-selector">
+                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
+                            <ul id="langMenu" class="lang-menu">
+                                <li data-lang="EN">English</li>
+                                <li data-lang="HI">Hindi</li>
+                                <li data-lang="FR">French</li>
+                            </ul>
+                        </div>
+                        <!-- Currency Selector -->
+                        <div class="currency-selector">
+                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
+                            <ul id="currencyMenu" class="currency-menu">
+                                <li data-currency="CAD">$ CAD</li>
+                                <li data-currency="INR">₹ INR</li>
+                                <li data-currency="EUR">€ EUR</li>
+                            </ul>
+                        </div>
+                        <!-- User Login Section -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
+
+                            <!-- Dropdown (optional) -->
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="hero-text">
+            <h1>Explore Our Services</h1>
+            <p>Select what you need help with today</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/services-banner.png" alt="Services Banner" />
+        </div>
+    </section>
+
+    <!-- Service Options -->
+    <section style="text-align: center; padding: 40px 20px;">
+        <h2>Your One-Stop Tech Solution</h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 30px;">
+
+            <!-- Shop Parts -->
+            <div
+                style="width: 250px; padding: 20px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #f9f9f9;">
+                <img src="images/shoppart.png" alt="Shop Parts" style="width: 100px; height: 100px;">
+                <h3>Shop Parts</h3>
+                <p>Buy computer components, accessories, and more.</p>
+                <a href="shop.html" style="color: purple; font-weight: bold; text-decoration: underline;">Shop Now</a>
+            </div>
+
+            <!-- Request Repair -->
+            <div
+                style="width: 250px; padding: 20px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #f9f9f9;">
+                <img src="images/repair.png" alt="Request Repair" style="width: 100px; height: 100px;">
+                <h3>Request a Repair</h3>
+                <p>Get expert help for software or hardware issues.</p>
+                <a href="repair.html" style="color: purple; font-weight: bold; text-decoration: underline;">Repair</a>
+            </div>
+
+            <!-- Custom Build -->
+            <div
+                style="width: 250px; padding: 20px; border-radius: 16px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #f9f9f9;">
+                <img src="images/custombuild.png" alt="Custom Build" style="width: 100px; height: 100px;">
+                <h3>Get a Custom Build</h3>
+                <p>Build a PC tailored to your needs and budget.</p>
+                <a href="build.html" style="color: purple; font-weight: bold; text-decoration: underline;">Start
+                    Build</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Service</h3>
+                <ul>
+                    <li>Software/Hardware Repairs</li>
+                    <li>Custom PC Builds</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="#">PC Components</a></li>
+                    <li><a href="#">Laptops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

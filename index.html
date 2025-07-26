@@ -28,13 +28,14 @@
 
                     <!-- Nav Links -->
                     <ul class="nav-links" id="navLinks">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Comparison</a></li>
-                        <li><a href="#">Request a Quote</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
                     </ul>
 
                     <!-- Right Icons -->
@@ -66,7 +67,7 @@
                         <!-- User Login Section -->
                         <div class="user-section" id="userSection">
                             <i class="fas fa-user"></i>
-                            <span id="userToggle">User <i class="fas fa-chevron-down"></i></span>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
 
                             <!-- Dropdown (optional) -->
                             <ul id="userMenu" class="user-menu">
@@ -100,7 +101,7 @@
         <div class="carousel-track-container">
             <ul class="carousel-track" id="carouselTrack">
                 <li class="carousel-slide current-slide">
-                    <img src="images/banner1.jpg" alt="Slide 1" />
+                    <img src="images/banner1.jpg" alt="Slide 1" loading="lazy" />
                 </li>
                 <li class="carousel-slide">
                     <img src="images/banner2.jpg" alt="Slide 2" />
@@ -139,7 +140,7 @@
             <div>
                 <h3>Information</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="#">Information</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms & Conditions</a></li>
@@ -156,7 +157,7 @@
             <div>
                 <h3>Popular Products</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
@@ -171,7 +172,7 @@
     <script src="script.js"></script>
 
     <script>
-        // Menu toggle code (already added earlier)
+
         const toggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -197,7 +198,7 @@
             }
         });
 
-        // Optional: Hide if clicked outside
+        // Hide if clicked outside
         document.addEventListener('click', function (e) {
             if (!searchDropdown.contains(e.target) && !searchIcon.contains(e.target)) {
                 searchDropdown.classList.remove('show');
@@ -229,8 +230,7 @@
                 langToggle.innerHTML = `${selected} <i class="fas fa-chevron-down"></i>`;
                 langMenu.style.display = 'none';
 
-                // (Optional) Logic to change text content
-                // changeWebsiteLanguage(selected);
+
             });
         });
 

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Noventra Tech</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Header from index.html -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <!-- Hamburger -->
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search Toggle -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="language-selector">
+                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
+                            <ul id="langMenu" class="lang-menu">
+                                <li data-lang="EN">English</li>
+                                <li data-lang="HI">Hindi</li>
+                                <li data-lang="FR">French</li>
+                            </ul>
+                        </div>
+                        <!-- Currency Selector -->
+                        <div class="currency-selector">
+                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
+                            <ul id="currencyMenu" class="currency-menu">
+                                <li data-currency="CAD">$ CAD</li>
+                                <li data-currency="INR">₹ INR</li>
+                                <li data-currency="EUR">€ EUR</li>
+                            </ul>
+                        </div>
+                        <!-- User Login Section -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
+
+                            <!-- Dropdown (optional) -->
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <h1>Shop Computer Parts</h1>
+    </header>
+
+    <main class="products">
+        <div class="product">
+            <img src="images/cpu.jpg" alt="CPU">
+
+            <h3>Intel Core i7</h3>
+            <p>8-Core 12th Gen Processor</p>
+            <button class="buttonStyle" onclick="addToCart('Intel Core i7')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/gpu.jpg" alt="GPU">
+            <h3>NVIDIA RTX 3080</h3>
+            <p>10GB GDDR6X Graphic Card</p>
+            <button class="buttonStyle" onclick="addToCart('NVIDIA RTX 3080')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/ram.jpg" alt="RAM">
+            <h3>16GB DDR4 RAM</h3>
+            <p>3200MHz High-Speed Memory</p>
+            <button class="buttonStyle" onclick="addToCart('16GB DDR4 RAM')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/ssd.jpg" alt="SSD">
+            <h3>1TB SSD</h3>
+            <p>NVMe Gen4 High-Speed Storage</p>
+            <button class="buttonStyle" onclick="addToCart('1TB SSD')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/motherboard.jpg" alt="Motherboard">
+            <h3>ASUS Prime Z690</h3>
+            <p>High Performance LGA1700 Board</p>
+            <button class="buttonStyle" onclick="addToCart('ASUS Prime Z690')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/psu.jpg" alt="Power Supply">
+            <h3>750W PSU</h3>
+            <p>Modular Power Supply Unit</p>
+            <button class="buttonStyle" onclick="addToCart('750W PSU')">Add to Cart</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Service</h3>
+                <ul>
+                    <li>Software/Hardware Repairs</li>
+                    <li>Custom PC Builds</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="#">PC Components</a></li>
+                    <li><a href="#">Laptops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

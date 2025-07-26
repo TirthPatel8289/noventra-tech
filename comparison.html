@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Noventra Tech</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="comparison.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Header from index.html -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+                    <!-- Hamburger -->
+                    <div class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search Toggle -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+                        <div class="language-selector">
+                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
+                            <ul id="langMenu" class="lang-menu">
+                                <li data-lang="EN">English</li>
+                                <li data-lang="HI">Hindi</li>
+                                <li data-lang="FR">French</li>
+                            </ul>
+                        </div>
+                        <!-- Currency Selector -->
+                        <div class="currency-selector">
+                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
+                            <ul id="currencyMenu" class="currency-menu">
+                                <li data-currency="CAD">$ CAD</li>
+                                <li data-currency="INR">₹ INR</li>
+                                <li data-currency="EUR">€ EUR</li>
+                            </ul>
+                        </div>
+                        <!-- User Login Section -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
+
+                            <!-- Dropdown (optional) -->
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <h1>Comparison of Products</h1>
+    </header>
+
+    <section class="compare-section">
+        <div class="compare-controls">
+            <label>
+                Category:
+                <select id="category" onchange="loadOptions()">
+                    <option value="hardware">Hardware</option>
+                    <option value="software">Software</option>
+                </select>
+            </label>
+            <label>
+                Product 1:
+                <select id="product1"></select>
+            </label>
+            <label>
+                Product 2:
+                <select id="product2"></select>
+            </label>
+            <button onclick="compare()">Compare</button>
+        </div>
+
+        <div id="comparison-result"></div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Information</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Service</h3>
+                <ul>
+                    <li>Software/Hardware Repairs</li>
+                    <li>Custom PC Builds</li>
+                    <li>Technical Support</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="#">PC Components</a></li>
+                    <li><a href="#">Laptops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const products = {
+            hardware: [
+                {
+                    name: "Intel Core i9",
+                    price: "$499.99",
+                    brand: "Intel",
+                    specs: "16-Core, 24-Thread, 5.2GHz Turbo",
+                },
+                {
+                    name: "AMD Ryzen 9",
+                    price: "$459.99",
+                    brand: "AMD",
+                    specs: "16-Core, 32-Thread, 4.9GHz Boost",
+                },
+                {
+                    name: "NVIDIA RTX 4090",
+                    price: "$1,599.99",
+                    brand: "NVIDIA",
+                    specs: "24GB GDDR6X, DLSS 3.5, Ray Tracing",
+                },
+                {
+                    name: "AMD Radeon RX 7900 XT",
+                    price: "$899.99",
+                    brand: "AMD",
+                    specs: "20GB GDDR6, RDNA 3 Architecture",
+                },
+            ],
+            software: [
+                {
+                    name: "Windows 11 Pro",
+                    price: "$149.99",
+                    brand: "Microsoft",
+                    specs: "64-bit, Secure Boot, TPM 2.0",
+                },
+                {
+                    name: "Ubuntu 24.04 LTS",
+                    price: "Free",
+                    brand: "Canonical",
+                    specs: "Linux Kernel 6.x, GNOME 46",
+                },
+                {
+                    name: "Microsoft Office 365",
+                    price: "$99.99/year",
+                    brand: "Microsoft",
+                    specs: "Word, Excel, PowerPoint, Outlook",
+                },
+                {
+                    name: "Adobe Photoshop",
+                    price: "$20.99/month",
+                    brand: "Adobe",
+                    specs: "Creative Cloud, AI-Powered Tools",
+                },
+            ]
+        };
+
+        function loadOptions() {
+            const category = document.getElementById('category').value;
+            const product1 = document.getElementById('product1');
+            const product2 = document.getElementById('product2');
+            product1.innerHTML = '';
+            product2.innerHTML = '';
+            products[category].forEach((p, index) => {
+                const opt1 = document.createElement('option');
+                const opt2 = document.createElement('option');
+                opt1.value = index;
+                opt1.textContent = p.name;
+                opt2.value = index;
+                opt2.textContent = p.name;
+                product1.appendChild(opt1);
+                product2.appendChild(opt2);
+            });
+            // Select different default options
+            product2.selectedIndex = 1;
+        }
+
+        function compare() {
+            const category = document.getElementById('category').value;
+            const index1 = document.getElementById('product1').value;
+            const index2 = document.getElementById('product2').value;
+
+            if (index1 === index2) {
+                alert("Please select two different products to compare.");
+                return;
+            }
+
+            const prod1 = products[category][index1];
+            const prod2 = products[category][index2];
+
+            const table = `
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              <th>${prod1.name}</th>
+              <th>${prod2.name}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Brand</td>
+              <td>${prod1.brand}</td>
+              <td>${prod2.brand}</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>${prod1.price}</td>
+              <td>${prod2.price}</td>
+            </tr>
+            <tr>
+              <td>Specs</td>
+              <td>${prod1.specs}</td>
+              <td>${prod2.specs}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+            document.getElementById('comparison-result').innerHTML = table;
+        }
+
+        window.onload = loadOptions;
+    </script>
+</body>
+
+</html>
