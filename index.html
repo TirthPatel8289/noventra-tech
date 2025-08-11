@@ -21,10 +21,7 @@
 
                 <!-- Main Nav -->
                 <nav class="main-nav">
-                    <!-- Hamburger -->
-                    <div class="menu-toggle" id="menuToggle">
-                        <i class="fas fa-bars"></i>
-                    </div>
+
 
                     <!-- Nav Links -->
                     <ul class="nav-links" id="navLinks">
@@ -35,6 +32,7 @@
                         <li><a href="comparison.html">Comparison</a></li>
                         <li><a href="build.html">Request a Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
 
                     </ul>
 
@@ -47,23 +45,7 @@
                                 <input type="text" id="searchInput" placeholder="Search..." />
                             </div>
                         </div>
-                        <div class="language-selector">
-                            <span id="langToggle">EN <i class="fas fa-chevron-down"></i></span>
-                            <ul id="langMenu" class="lang-menu">
-                                <li data-lang="EN">English</li>
-                                <li data-lang="HI">Hindi</li>
-                                <li data-lang="FR">French</li>
-                            </ul>
-                        </div>
-                        <!-- Currency Selector -->
-                        <div class="currency-selector">
-                            <span id="currencyToggle">CAD <i class="fas fa-chevron-down"></i></span>
-                            <ul id="currencyMenu" class="currency-menu">
-                                <li data-currency="CAD">$ CAD</li>
-                                <li data-currency="INR">₹ INR</li>
-                                <li data-currency="EUR">€ EUR</li>
-                            </ul>
-                        </div>
+
                         <!-- User Login Section -->
                         <div class="user-section" id="userSection">
                             <i class="fas fa-user"></i>
@@ -90,7 +72,7 @@
             <a href="#" class="btn">More</a>
         </div>
         <div class="hero-image">
-            <img src="images/news.png" alt="Sale Banner">
+            <img src="images/news.png" alt="Sale Banner" />
         </div>
     </section>
 
@@ -120,15 +102,15 @@
         <h2>Your One-Stop Tech Solution: Repairs, Builds & Components</h2>
         <div class="service-boxes">
             <div class="box">
-                <img src="images/shoppart.png" alt="Shop Parts">
+                <img src="images/shoppart.png" alt="Shop Parts" />
                 <p>Shop Parts</p>
             </div>
             <div class="box">
-                <img src="images/repair.png" alt="Request a Repair">
+                <img src="images/repair.png" alt="Request a Repair" />
                 <p>Request a Repair</p>
             </div>
             <div class="box">
-                <img src="images/custombuild.png" alt="Custom Build">
+                <img src="images/custombuild.png" alt="Custom Build" />
                 <p>Get a Custom Build Computer</p>
             </div>
         </div>
@@ -141,251 +123,34 @@
                 <h3>Information</h3>
                 <ul>
                     <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Service</h3>
                 <ul>
-                    <li>Software/Hardware Repairs</li>
-                    <li>Custom PC Builds</li>
-                    <li>Technical Support</li>
+                    <li><a href="shop.html">Software/Hardware Repairs</a></li>
+                    <li><a href="build.html">Custom PC Builds</a></li>
+                    <li><a href="repair.html">Technical Support</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Popular Products</h3>
                 <ul>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="products.html">PC Components</a></li>
                 </ul>
             </div>
             <div>
                 <h3>Contact Us</h3>
-                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p>123, Conestoga College<br />Waterloo, Ontario, N2C 2P6</p>
                 <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-
-    <script>
-
-        const toggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-
-        document.querySelectorAll('#navLinks a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('show');
-            });
-        });
-
-        const searchIcon = document.getElementById('searchIcon');
-        const searchDropdown = document.getElementById('searchDropdown');
-        const searchInput = document.getElementById('searchInput');
-
-        // Toggle dropdown visibility
-        searchIcon.addEventListener('click', () => {
-            searchDropdown.classList.toggle('show');
-            if (searchDropdown.classList.contains('show')) {
-                searchInput.focus();
-            }
-        });
-
-        // Hide if clicked outside
-        document.addEventListener('click', function (e) {
-            if (!searchDropdown.contains(e.target) && !searchIcon.contains(e.target)) {
-                searchDropdown.classList.remove('show');
-            }
-        });
-
-        // Handle Enter key
-        searchInput.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter') {
-                alert("You searched for: " + this.value);
-                this.value = "";
-                searchDropdown.classList.remove('show');
-            }
-        });
-
-
-        // Language dropdown
-        const langToggle = document.getElementById('langToggle');
-        const langMenu = document.getElementById('langMenu');
-
-        langToggle.addEventListener('click', () => {
-            langMenu.style.display = langMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Update displayed language
-        document.querySelectorAll('#langMenu li').forEach(item => {
-            item.addEventListener('click', () => {
-                const selected = item.getAttribute('data-lang');
-                langToggle.innerHTML = `${selected} <i class="fas fa-chevron-down"></i>`;
-                langMenu.style.display = 'none';
-
-
-            });
-        });
-
-        // Hide dropdown when clicking outside
-        document.addEventListener('click', function (e) {
-            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
-                langMenu.style.display = 'none';
-            }
-        });
-
-
-        // Currency dropdown toggle
-        const currencyToggle = document.getElementById('currencyToggle');
-        const currencyMenu = document.getElementById('currencyMenu');
-
-        currencyToggle.addEventListener('click', () => {
-            currencyMenu.style.display = currencyMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Update currency symbol across the site
-        document.querySelectorAll('#currencyMenu li').forEach(item => {
-            item.addEventListener('click', () => {
-                const currencyCode = item.getAttribute('data-currency');
-                currencyToggle.innerHTML = `${currencyCode} <i class="fas fa-chevron-down"></i>`;
-                currencyMenu.style.display = 'none';
-                updateCurrencySymbol(currencyCode);
-            });
-        });
-
-        // Click outside to close
-        document.addEventListener('click', function (e) {
-            if (!currencyToggle.contains(e.target) && !currencyMenu.contains(e.target)) {
-                currencyMenu.style.display = 'none';
-            }
-        });
-
-        // Function to update all prices
-        function updateCurrencySymbol(currency) {
-            const currencySymbols = {
-                CAD: '$',
-                INR: '₹',
-                EUR: '€'
-            };
-
-            const symbol = currencySymbols[currency] || '$';
-
-            // Update all elements with class 'price'
-            document.querySelectorAll('.price').forEach(el => {
-                const amount = el.getAttribute('data-amount'); // raw number
-                el.innerText = `${symbol}${amount}`;
-            });
-        }
-
-
-
-
-        const userToggle = document.getElementById('userToggle');
-        const userMenu = document.getElementById('userMenu');
-        const signInOption = document.getElementById('signInOption');
-        const signOutOption = document.getElementById('signOutOption');
-
-        // Simulated login state
-        let isSignedIn = false;
-        let userName = "USER";
-
-        // Toggle user menu
-        userToggle.addEventListener('click', () => {
-            userMenu.style.display = userMenu.style.display === 'block' ? 'none' : 'block';
-        });
-
-        // Sign In logic
-        signInOption.addEventListener('click', () => {
-            isSignedIn = true;
-            userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
-            userMenu.style.display = 'none';
-        });
-
-        // Sign Out logic
-        signOutOption.addEventListener('click', () => {
-            isSignedIn = false;
-            userToggle.innerHTML = `Sign In <i class="fas fa-chevron-down"></i>`;
-            userMenu.style.display = 'none';
-        });
-
-        // Hide menu on outside click
-        document.addEventListener('click', function (e) {
-            if (!userToggle.contains(e.target) && !userMenu.contains(e.target)) {
-                userMenu.style.display = 'none';
-            }
-        });
-
-
-        // On page load
-        window.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('signedIn') === 'true') {
-                isSignedIn = true;
-                userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
-            }
-        });
-
-        signInOption.addEventListener('click', () => {
-            isSignedIn = true;
-            localStorage.setItem('signedIn', 'true');
-            userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
-            userMenu.style.display = 'none';
-        });
-
-        signOutOption.addEventListener('click', () => {
-            isSignedIn = false;
-            localStorage.setItem('signedIn', 'false');
-            userToggle.innerHTML = `Sign In <i class="fas fa-chevron-down"></i>`;
-            userMenu.style.display = 'none';
-        });
-
-
-
-
-        const track = document.getElementById("carouselTrack");
-        const slides = Array.from(track.children);
-        const prevButton = document.getElementById("prevBtn");
-        const nextButton = document.getElementById("nextBtn");
-
-        let currentIndex = 0;
-
-        function updateSlidePosition() {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-        }
-
-        prevButton.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSlidePosition();
-        });
-
-        nextButton.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateSlidePosition();
-        });
-
-        // Make sure the first slide is positioned on load
-        window.addEventListener("load", updateSlidePosition);
-
-
-
-        // On page load, check localStorage
-        window.addEventListener("DOMContentLoaded", () => {
-            if (localStorage.getItem("signedIn") === "true") {
-                isSignedIn = true;
-                userName = localStorage.getItem("userName") || "User";
-                userToggle.innerHTML = `${userName} <i class="fas fa-chevron-down"></i>`;
-            }
-        });
-
-    </script>
-
 </body>
 
 </html>

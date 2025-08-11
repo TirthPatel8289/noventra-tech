@@ -101,11 +101,12 @@ button {
 /* Hamburger Button */
 .menu-toggle {
     display: flex;
+    /* always visible */
     font-size: 20px;
     cursor: pointer;
     margin-right: 0px;
+    align-items: center;
 }
-
 
 /* Hero Section */
 .hero {
@@ -133,6 +134,7 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .hero-image img {
@@ -147,7 +149,6 @@ button {
     display: block;
     margin: 30px 0;
 }
-
 
 .image-carousel {
     position: relative;
@@ -251,42 +252,47 @@ footer {
     margin-bottom: 8px;
 }
 
-
-
 /* ==================== Responsive ==================== */
 @media (max-width: 1024px) {
     .menu-toggle {
-        display: block;
+        display: flex;
+        /* Show hamburger on mobile */
+    }
+
+    .menu-toggle {
+        display: flex;
+        /* always visible */
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 0px;
+        align-items: center;
     }
 
     .nav-links {
-        display: flex;
+        display: none;
+        /* hide by default */
         flex-direction: column;
         background-color: white;
         border-radius: 10px;
         padding: 10px 20px;
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: 20px;
         right: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 999;
-
-        /* Slide-in Animation */
-        transform: translateY(-20px);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s ease-in-out;
+        list-style: none;
+        gap: 10px;
     }
 
     .nav-links.show {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
+        display: flex;
+        /* show on toggle */
     }
 
     .nav-icons {
         display: none;
+        /* Hide right icons on mobile */
     }
 
     .main-nav {
@@ -334,82 +340,6 @@ footer {
     outline: none;
     font-size: 14px;
 }
-
-
-.language-selector {
-    position: relative;
-    cursor: pointer;
-}
-
-.language-selector span {
-    font-size: 14px;
-    color: black;
-}
-
-.lang-menu {
-    display: none;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    list-style: none;
-    padding: 8px 0;
-    width: 120px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-.lang-menu li {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.lang-menu li:hover {
-    background-color: #f0f0f0;
-}
-
-
-
-/* Currency Code */
-
-.currency-selector {
-    position: relative;
-    cursor: pointer;
-}
-
-.currency-selector span {
-    font-size: 14px;
-    color: black;
-}
-
-.currency-menu {
-    display: none;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    list-style: none;
-    padding: 8px 0;
-    width: 120px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-}
-
-.currency-menu li {
-    padding: 8px 12px;
-    cursor: pointer;
-}
-
-.currency-menu li:hover {
-    background-color: #f0f0f0;
-}
-
-
-
 
 .user-section {
     position: relative;

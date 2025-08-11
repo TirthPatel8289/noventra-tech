@@ -4,61 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Noventra Tech</title>
+    <title>Information | Noventra Tech</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        /* Gallery specific styles */
-        .gallery-section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-
-        .gallery-section h1 {
-            margin-bottom: 30px;
-            color: #4B0082;
-            font-weight: 700;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .gallery-item img {
-                height: 140px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <!-- Header (same as other pages) -->
+    <!-- Header -->
     <header>
         <div class="nav-container">
             <div class="nav-wrapper">
@@ -77,7 +30,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="products.html">Products</a></li>
-                        <li><a href="gallery.html" class="active">Gallery</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="comparison.html">Comparison</a></li>
                         <li><a href="build.html">Request a Quote</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -99,8 +52,6 @@
                         <div class="user-section" id="userSection">
                             <i class="fas fa-user"></i>
                             <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
-
-                            <!-- Dropdown -->
                             <ul id="userMenu" class="user-menu">
                                 <li id="signInOption">Sign In</li>
                                 <li id="signOutOption">Sign Out</li>
@@ -113,32 +64,75 @@
         </div>
     </header>
 
-    <!-- Gallery Content -->
-    <section class="gallery-section">
-        <h1>Our Work Gallery</h1>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/custompcbuild.png" alt="Custom PC Build 1" loading="lazy" />
-            </div>
-            <div class="gallery-item">
-                <img src="images/repairpc.jpg" alt="Repair Service" loading="lazy" />
-            </div>
-            <div class="gallery-item">
-                <img src="images/components.png" alt="Computer Components" loading="lazy" />
-            </div>
-            <div class="gallery-item">
-                <img src="images/custombuild2.png" alt="Custom PC Build 2" loading="lazy" />
-            </div>
-            <div class="gallery-item">
-                <img src="images/softwaresetup.jpg" alt="Software Setup" loading="lazy" />
-            </div>
-            <div class="gallery-item">
-                <img src="images/tecg.png" alt="Tech Support" loading="lazy" />
-            </div>
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="hero-text">
+            <h1>Information</h1>
+            <p>Learn more about our policies, terms, and important details</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/information-banner.png" alt="Information Banner" />
         </div>
     </section>
 
+    <!-- Information Content -->
+    <main style="padding: 50px 20px; max-width: 1200px; margin: auto;">
+        <section class="info-grid">
 
+            <a href="aboutus.html" class="info-card-link">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-building"></i></div>
+                    <h3>Company Overview</h3>
+                    <p>
+                        Noventra Tech is your trusted source for all things technology — from PC components and custom
+                        builds
+                        to repairs and tech advice. We pride ourselves on providing transparent, helpful, and accurate
+                        information to empower our customers.
+                    </p>
+                </div>
+            </a>
+
+            <a href="privacypolicy.html" class="info-card-link">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Privacy Policy</h3>
+                    <p>
+                        Your privacy matters to us. We ensure that any data you share with us is secure, never sold to
+                        third
+                        parties, and used only for providing services you request.
+                    </p>
+                </div>
+            </a>
+
+            <a href="terms.html" class="info-card-link">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-file-contract"></i></div>
+                    <h3>Terms & Conditions</h3>
+                    <p>
+                        By using our website and services, you agree to our terms of service. Please review them
+                        carefully to
+                        understand your rights and obligations.
+                    </p>
+                </div>
+            </a>
+
+            <a href="contact.html" class="info-card-link">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Customer Support</h3>
+                    <p>
+                        Have a question? Our support team is available via email, chat, or phone to assist you with any
+                        inquiries.
+                    </p>
+                </div>
+            </a>
+
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div>
@@ -151,12 +145,14 @@
                 </ul>
             </div>
             <div>
-                <h3>Service</h3>
-                <ul>
-                    <li><a href="shop.html">Software/Hardware Repairs</a></li>
-                    <li><a href="build.html">Custom PC Builds</a></li>
-                    <li><a href="repair.html">Technical Support</a></li>
-                </ul>
+                <div>
+                    <h3>Service</h3>
+                    <ul>
+                        <li><a href="shop.html">Software/Hardware Repairs</a></li>
+                        <li><a href="build.html">Custom PC Builds</a></li>
+                        <li><a href="repair.html">Technical Support</a></li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <h3>Popular Products</h3>
@@ -166,13 +162,14 @@
             </div>
             <div>
                 <h3>Contact Us</h3>
-                <p>123, Conestoga College<br />Waterloo, Ontario, N2C 2P6</p>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
                 <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>

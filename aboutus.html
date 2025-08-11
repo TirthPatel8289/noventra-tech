@@ -3,112 +3,143 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Team – Noventra Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Noventra Tech</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <style>
-        body.team-body {
-            background-color: #f5f7fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 40px 0;
-            color: #333;
-        }
-
-        .team-container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 30px 40px;
-        }
-
-        .team-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .team-header h1 {
-            color: #007bff;
-            margin-bottom: 8px;
-            font-weight: 700;
-            font-size: 2.5rem;
-        }
-
-        .team-header p {
-            color: #555;
-            font-size: 1.1rem;
-        }
-
-        table.team-table {
-            width: 100%;
-            border-collapse: collapse;
-            box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
-        }
-
-        table.team-table th,
-        table.team-table td {
-            border: 1px solid #ddd;
-            padding: 14px 20px;
-            text-align: left;
-            font-size: 1rem;
-        }
-
-        table.team-table th {
-            background-color: #007bff;
-            color: #fff;
-            font-weight: 600;
-        }
-
-        table.team-table tbody tr:hover {
-            background-color: #e6f0ff;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .team-container {
-                padding: 20px 15px;
-            }
-
-            table.team-table th,
-            table.team-table td {
-                padding: 10px 8px;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
-<body class="team-body">
-    <div class="team-container">
-        <div class="team-header">
-            <h1>Our Team</h1>
-            <p>Meet the professionals behind Noventra Tech</p>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="nav-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Main Nav -->
+                <nav class="main-nav">
+
+
+                    <!-- Nav Links -->
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="comparison.html">Comparison</a></li>
+                        <li><a href="build.html">Request a Quote</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+
+                    </ul>
+
+                    <!-- Right Icons -->
+                    <div class="nav-icons">
+                        <!-- Search -->
+                        <div class="search-wrapper">
+                            <i class="fas fa-search" id="searchIcon"></i>
+                            <div class="search-dropdown" id="searchDropdown">
+                                <input type="text" id="searchInput" placeholder="Search..." />
+                            </div>
+                        </div>
+
+
+                        <!-- User -->
+                        <div class="user-section" id="userSection">
+                            <i class="fas fa-user"></i>
+                            <span id="userToggle">Login / Signup <i class="fas fa-chevron-down"></i></span>
+                            <ul id="userMenu" class="user-menu">
+                                <li id="signInOption">Sign In</li>
+                                <li id="signOutOption">Sign Out</li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
+    </header>
 
-        <table class="team-table" aria-label="Team Members">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tirth</td>
-                    <td>Developer</td>
-                    <td>Tpatel8289@Conestogac.on.ca</td>
-                    <td>437-733-3413</td>
-                </tr>
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="hero-text">
+            <h1>About Noventra Tech</h1>
+            <p>Your trusted partner for all things tech.</p>
+        </div>
+        <div class="hero-image">
+            <img src="images/about.png" alt="About Us Banner" />
+        </div>
+    </section>
 
-            </tbody>
-        </table>
-    </div>
+    <!-- About Content -->
+    <section style="padding: 40px 20px; max-width: 1000px; margin: auto;">
+        <h2 style="text-align:center;">Who We Are</h2>
+        <p style="text-align:center; max-width:800px; margin:auto;">
+            At Noventra Tech, we believe in blending innovation with reliability. Our team of experts works tirelessly
+            to bring you the best technology solutions — whether it’s building your dream PC, repairing your devices, or
+            providing top-notch customer support.
+        </p>
+
+        <h2 style="text-align:center; margin-top:40px;">Our Mission</h2>
+        <p style="text-align:center; max-width:800px; margin:auto;">
+            Our mission is simple: make technology accessible, affordable, and enjoyable for everyone. We aim to bridge
+            the gap between complex tech and everyday users.
+        </p>
+
+        <h2 style="text-align:center; margin-top:40px;">Meet the Team</h2>
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-top:30px;">
+            <div
+                style="width:250px; padding:20px; border-radius:16px; box-shadow:0 4px 8px rgba(0,0,0,0.1); background:#f9f9f9; text-align:center;">
+                <img src="images/team.png" alt="" style="width:100px; height:100px; border-radius:50%;">
+                <h3>Tirth Patel</h3>
+                <p>Developer</p>
+                <p>Tpatel8289@conestogac.on.ca</p>
+                <p>+1(437)-733-3413</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div>
+                <div>
+                    <h3>Service</h3>
+                    <ul>
+                        <li><a href="shop.html">Software/Hardware Repairs</a></li>
+                        <li><a href="build.html">Custom PC Builds</a></li>
+                        <li><a href="repair.html">Technical Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>Popular Products</h3>
+                <ul>
+                    <li><a href="products.html">PC Components</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact Us</h3>
+                <p>123, Conestoga College<br>Waterloo, Ontario, N2C 2P6</p>
+                <p><a href="mailto:support@noventratech.com">support@noventratech.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
